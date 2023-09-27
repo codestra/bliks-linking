@@ -4,15 +4,6 @@ import React from "react";
 export const IndexPage = () => {
   const router = useRouter();
   const { installRedirect } = router.query;
-  const [windowWidth, setWindowWidth] = React.useState(window.innerWidth);
-
-  React.useEffect(() => {
-    const handleResize = () => setWindowWidth(window.innerWidth);
-    window.addEventListener("resize", handleResize);
-
-    // Cleanup the event listener on component unmount
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
 
   React.useEffect(() => {
     if (installRedirect) {
@@ -42,16 +33,15 @@ export const IndexPage = () => {
         height: "100vh",
         alignItems: "center",
         gap: "4rem",
-        backgroundColor: "#F3F5F9",
-        flexDirection: windowWidth > 1024 ? "row" : "column",
-        padding: 30,
       }}
+      className="container"
     >
       <div
         style={{
           display: "flex",
           flexDirection: "column",
           gap: "2rem",
+          margin: 30,
         }}
       >
         <div>
@@ -78,7 +68,7 @@ export const IndexPage = () => {
           </a>
         </div>
       </div>
-      <div>
+      <div style={{ margin: 30 }}>
         <img
           src="img/Hero_Customer.png"
           alt="img"

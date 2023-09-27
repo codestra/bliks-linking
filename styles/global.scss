@@ -3,6 +3,7 @@ body {
     height: 100%;
     margin: 0;
     padding: 0;
+    background-color: #f3f5f9;
 }
 h1,
 h2 {
@@ -12,4 +13,14 @@ h2 {
 
 h1 {
     font-size: 4rem;
+}
+
+.container {
+    // Default style for windowWidth <= 1024
+    flex-direction: column;
+
+    // Style for windowWidth > 1024
+    @media (min-width: 1025px) {
+        flex-direction: row;
+    }
 }
