@@ -1,0 +1,13 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "getbliks.com",
+      "sha256_cert_fingerprints": [
+        "64:6B:2E:FE:6A:61:D4:20:3A:C1:9A:94:77:CA:FA:3A:C8:46:CB:C8:3E:1C:A0:EA:EC:AB:C6:1C:E0:43:43:25",
+        "5A:36:DD:4D:75:89:5A:34:BA:4A:33:BA:C6:36:BC:DB:09:41:29:1A:88:A3:1D:FD:9D:4A:6F:40:B4:75:BD:89"
+      ]
+    }
+  }
+]
