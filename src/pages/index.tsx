@@ -3,7 +3,7 @@ import React from "react";
 
 export const IndexPage = () => {
   const router = useRouter();
-  const { installRedirect } = router.query;
+  const { installRedirect, code, vendorId } = router.query;
 
   React.useEffect(() => {
     if (installRedirect) {
@@ -24,6 +24,14 @@ export const IndexPage = () => {
       }
     }
   }, [installRedirect]);
+
+  React.useEffect(() => {
+    if (code && vendorId) {
+      window.location.replace(
+        `${process.env.NEXT_PUBLIC_HOST_APP}?code=${code}&vendorId=${vendorId}`
+      );
+    }
+  }, [code, vendorId]);
 
   return (
     <div
