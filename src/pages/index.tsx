@@ -46,7 +46,7 @@ export const IndexPage = () => {
       }}
     >
       <Stack gap={4} margin={5}>
-        <Stack gap={2}>
+        <Stack gap={2} mb={10}>
           <Typography
             style={{ textAlign: "center", marginTop: "10rem" }}
             sx={{ typography: { sm: "h1", xs: "h2" } }}
