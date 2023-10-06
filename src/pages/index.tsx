@@ -1,3 +1,4 @@
+import { Stack, Typography } from "@mui/material";
 import { useRouter } from "next/router";
 import React from "react";
 
@@ -34,48 +35,58 @@ export const IndexPage = () => {
   }, [code, vendorId]);
 
   return (
-    <div
-      style={{
-        display: "flex",
-        justifyContent: "center",
-        height: "100vh",
-        alignItems: "center",
-        gap: "4rem",
-      }}
+    <Stack
+      gap={4}
+      justifyContent={"center"}
+      alignItems={"center"}
       className="container"
+      direction={{ xs: "column", md: "row" }}
+      sx={{
+        minHeight: "100vh",
+      }}
     >
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          gap: "2rem",
-          margin: 30,
-        }}
-      >
-        <div>
-          <h1 style={{ textAlign: "center", marginTop: "10rem" }}>
+      <Stack gap={4} margin={5}>
+        <Stack gap={2}>
+          <Typography
+            style={{ textAlign: "center", marginTop: "10rem" }}
+            sx={{ typography: { sm: "h1", xs: "h2" } }}
+          >
             Deine digital
             <br />
             Stempelkarte
-          </h1>
-          <h2 style={{ textAlign: "center" }}>
-            Bequem digital Stempel sammeln und dabei die Umwelt <br /> schonen
-          </h2>
-        </div>
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "space-between",
-          }}
-        >
+          </Typography>
+          <Typography
+            style={{ textAlign: "center" }}
+            sx={{ typography: { sm: "h4", xs: "h5" } }}
+          >
+            Bequem digital Stempel sammeln und dabei die Umwelt schonen
+          </Typography>
+        </Stack>
+        <Stack gap={4} direction="row" justifyContent="space-evenly">
           <a href="https://play.google.com/store/apps/details?id=getbliks.com">
-            <img src="img/play-store.png" alt="img" />
+            <img
+              src="img/play-store.png"
+              alt="img"
+              style={{
+                width: "100%",
+                display: "block",
+                maxWidth: "100%",
+              }}
+            />
           </a>
           <a href="https://apps.apple.com/us/app/bliks/id1559236451">
-            <img src="img/app-store.png" alt="img" />
+            <img
+              src="img/app-store.png"
+              alt="img"
+              style={{
+                width: "100%",
+                display: "block",
+                maxWidth: "100%",
+              }}
+            />
           </a>
-        </div>
-      </div>
+        </Stack>
+      </Stack>
       <div style={{ margin: 30 }}>
         <img
           src="img/Hero_Customer.png"
@@ -88,7 +99,7 @@ export const IndexPage = () => {
           }}
         />
       </div>
-    </div>
+    </Stack>
   );
 };
 
